@@ -1,13 +1,10 @@
-function majeur()
+function verifyAge()
 {
   var age = document.getElementById("age").value;
-  // Si age n'est pas un nombre (NaN = Not an Number)
-  if (isNaN(age))
+  // Si age n'est pas vide et que c'est un nombre
+  if (age && !isNaN(age))
   {
-    alert("Entrez votre age !");
-  }
-  else
-  {
+    // Si vous avez 18 ans ou plus
     if (age >= 18)
     {
       alert("Vous êtes majeur");
@@ -16,5 +13,9 @@ function majeur()
     {
       alert("Vous êtes mineur");
     }
+  }
+  else
+  {
+    alert("Entrez votre age !");
   }
 }
